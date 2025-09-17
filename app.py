@@ -2,7 +2,6 @@ import streamlit as st
 import google.generativeai as genai
 import os
 from PIL import Image
-import pyttsx3
 import speech_recognition as sr
 import tempfile
 
@@ -61,14 +60,7 @@ text_input = st.text_area("Type here:", value=q, placeholder="Which fertilizer s
 q = text_input if text_input else q
 
 # ---------- Helper: Speak Text ----------
-def speak_text(text):
-    try:
-        engine = pyttsx3.init()
-        engine.setProperty("rate", 150)
-        engine.say(text)
-        engine.runAndWait()
-    except:
-        st.warning("Speech output not available on this system.")
+
 
 # ---------- Offline Fallback ----------
 knowledge_base = {
@@ -110,5 +102,5 @@ if st.button("🔍 Get Advice") and q.strip():
         f"{answer}</div>",
         unsafe_allow_html=True
     )
-    speak_text(answer)
+
 
