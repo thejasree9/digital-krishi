@@ -1,5 +1,4 @@
 streamlit
 google-generativeai
 Pillow
-pyttsx3
 SpeechRecognition
