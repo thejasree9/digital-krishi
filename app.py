@@ -6,7 +6,7 @@ import speech_recognition as sr
 import tempfile
 
 # ---------- Configure Gemini ----------
-genai.configure(api_key="AIzaSyAxN7FiOW3-WqJrSibUOMi2UsvPEbQP8OM")
+genai.configure(api_key="ENTER THE API KEY")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # ---------- Streamlit Page Setup ----------
